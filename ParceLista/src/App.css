@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header, .footer {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}
