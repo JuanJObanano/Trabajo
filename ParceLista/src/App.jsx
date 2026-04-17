@@ -1,15 +1,23 @@
+import { useState } from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const [activePath, setActivePath] = useState("/");
+
   return (
-    <>
-      <Header />
-      <Dashboard />
-      <Footer />
-    </>
+    <div className="app-layout">
+      <Header activePath={activePath} onNavigate={setActivePath} />
+      {activePath === "/" && <Dashboard />}
+      {activePath !== "/" && (
+        <main className="main-content" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontSize: 40, marginBottom: 12 }}>🚧</p>
+            <p style={{ fontSize: 16, color: "var(--text-secondary)" }}>Sección en construcción</p>
+          </div>
+        </main>
+      )}
+    </div>
   );
 }
-
-export default App;
