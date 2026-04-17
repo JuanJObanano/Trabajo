@@ -109,3 +109,22 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 150px;
+  font-size: 18px;
+}
